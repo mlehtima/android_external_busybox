@@ -25,6 +25,7 @@
 //usage:       "Name:       debian\n"
 //usage:       "Address:    127.0.0.1\n"
 
+#include <stdlib.h>
 #include <resolv.h>
 #include "libbb.h"
 
@@ -49,6 +50,8 @@ struct __res_state * __res_state(void)
 {
 	return &res_st;
 }
+#define _res (*__res_state())
+
 #endif
 
 #define EXT(res) ((&res)->_u._ext)

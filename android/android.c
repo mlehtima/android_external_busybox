@@ -7,7 +7,7 @@
  * Licensed under GPLv2, see file LICENSE in this tarball for details.
  */
 
-#include <stdlib.h>
+//#include <stdlib.h>
 #include "libbb.h"
 
 #ifndef BIONIC_ICS
@@ -89,8 +89,8 @@ char *hasmntopt(const struct mntent *mnt, const char *opt)
 
 /* declared in grp.h, but not necessary */
 #if !ENABLE_USE_BB_PWD_GRP
-int setpwent() { return 0; }
-void setgrent() {}
-void endgrent() {}
+//int setpwent() { return 0; }
+//void setgrent() {}
+//void endgrent() {}
 #endif
 

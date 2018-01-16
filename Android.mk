@@ -154,7 +154,7 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 LOCAL_SHARED_LIBRARIES := libc libcutils libm
 LOCAL_STATIC_LIBRARIES := libclearsilverregex libuclibcrpc libselinux
 LOCAL_ADDITIONAL_DEPENDENCIES := $(busybox_prepare_full)
-LOCAL_CLANG := false
+#LOCAL_CLANG := false
 include $(BUILD_EXECUTABLE)
 
 ifeq ($(WITH_BUSYBOX_LINKS),true)
@@ -207,7 +207,7 @@ LOCAL_MODULE_PATH := $(PRODUCT_OUT)/utilities
 LOCAL_UNSTRIPPED_PATH := $(PRODUCT_OUT)/symbols/utilities
 LOCAL_ADDITIONAL_DEPENDENCIES := $(busybox_prepare_full)
 LOCAL_PACK_MODULE_RELOCATIONS := false
-LOCAL_CLANG := false
+#LOCAL_CLANG := false
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
@@ -235,5 +235,5 @@ LOCAL_MODULE_PATH := $(PRODUCT_OUT)/utilities
 LOCAL_UNSTRIPPED_PATH := $(PRODUCT_OUT)/symbols/utilities
 LOCAL_ADDITIONAL_DEPENDENCIES := $(busybox_prepare_minimal)
 LOCAL_PACK_MODULE_RELOCATIONS := false
-LOCAL_CLANG := false
+#LOCAL_CLANG := false
 include $(BUILD_EXECUTABLE)

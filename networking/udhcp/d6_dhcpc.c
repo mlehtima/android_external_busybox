@@ -32,6 +32,7 @@
 #include "d6_common.h"
 
 #include <netinet/if_ether.h>
+#include <linux/if_ether.h>
 #include <netpacket/packet.h>
 #include <linux/filter.h>
 

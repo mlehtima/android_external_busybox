@@ -77,6 +77,15 @@ enum {
 	IOBUF_SIZE = 8 * 1024
 };
 
+int selinux_getenforcemode(int *rc)
+{
+        if (rc) {
+                *rc = security_getenforce();
+                return 0;
+        }
+        return -1;
+}
+
 static uint8_t level;
 
 /* NB: compressStream() has to return -1 on errors, not die.

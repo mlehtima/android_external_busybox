@@ -133,7 +133,9 @@ extern int selinux_check_passwd_access(access_vector_t requested);
 
 #define selinux_policy_root() "/sepolicy"
 
-static int selinux_getenforcemode(int *rc)
+extern int selinux_getenforcemode(int *rc);
+/*
+extern int selinux_getenforcemode(int *rc)
 {
 	if (rc) {
 		*rc = security_getenforce();
@@ -141,6 +143,7 @@ static int selinux_getenforcemode(int *rc)
 	}
 	return -1;
 }
+*/
 
 static const char *selinux_file_contexts_path()
 {

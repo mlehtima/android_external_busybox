@@ -9,6 +9,7 @@
 #include "dhcpd.h"
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
+#include <linux/if_ether.h>
 #include <netpacket/packet.h>
 
 #if defined CONFIG_UDHCP_DEBUG && CONFIG_UDHCP_DEBUG >= 2
